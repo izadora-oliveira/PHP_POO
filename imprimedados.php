@@ -9,8 +9,7 @@
 <body>
 <?php
 
-require("pessoa.php");
-require("endereco.php");
+require("aluno.php")
 
 
 ?>
