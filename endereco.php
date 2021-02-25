@@ -105,7 +105,7 @@ function altercomplemento($complemento)
     $this->complemento = $complemento;
 }
 
-//objetos
+//instaciar o objetos
 $objFunc1 = new Endereco();
 $objFunc1->setRua('B');
 $objFunc1->setBairro('Prazeres');
