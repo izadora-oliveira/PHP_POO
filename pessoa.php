@@ -51,7 +51,7 @@ class Pessoa
     {
         return $this->nascimento;
     }
-    
+
 }
 
 //objetos
