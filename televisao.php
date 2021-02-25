@@ -53,6 +53,9 @@ class Televisao
     }
     
     function volumeTv(){
-        echo "Volume em {$this->volume}%..";
+        echo "Volume em {$this->volume}%";
+    }
+    function canaltv(){
+        echo "Canal {$this->canal}";
     }
 }
