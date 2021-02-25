@@ -51,18 +51,20 @@ class Aluno
     }
 
     //métodos
-    function infoaluno($nome, $matricula)
+    function infoaluno()
 	{
 		return "aluno: $this->nome ,matricula: $this->matricula";
 	}
-	function media($nota1, $nota2)
+	function media()
 	{
-		return $media = ($nota1 + $nota2) / 2;
+		return ($this->nota1 + $this->nota2) / 2;
 	}
 }
 
 //instaciar o objetos
 $objaluno = new Aluno("maria", "25022020", "7", "8");
 echo $objaluno->infoaluno();
+echo "<br/>";
+echo "média:";
 echo $objaluno->media();
 
