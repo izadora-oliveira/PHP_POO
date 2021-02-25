@@ -4,13 +4,15 @@ class Televisao
 {
 
     //Atributos
-    public $ligar;
     public $canal;
     public $volume;
 
-    public function setLigar($ligar)
+    public function __construct($canal, $volume)
     {
-        $this->ligar = $ligar;
+    $this->canal = $canal;
+    $this->volume = $volume;
+    }
+
     }
     public function setCanal($canal)
     {
@@ -20,42 +22,33 @@ class Televisao
     {
         $this->volume = $volume;
     }
-
-    function getLigar()
-    {
-        return $this->ligar;
-    }
-    function getCanal()
+    public function getCanal()
     {
         return $this->canal;
     }
-    function getVolume()
+    public function getVolume()
     {
         return $this->volume;
     }
 
 
-    //Métodos
-    function ligado() {
-        if ($this->ligar):
-            echo "<p>TV ligada!</p>";
-        else:
-            echo "<p>TV desligada</p>";
-        endif;
-    }
-    
-    function ligarTv() {
-        $this->ligar = true;
-    }
-    
-    function desligarTv() {
-        $this->ligar = false;
-    }
-    
-    function volumeTv(){
-        echo "Volume em {$this->volume}%";
-    }
-    function canaltv(){
-        echo "Canal {$this->canal}";
-    }
+    //métodos
+  public function adicionarCanal($canal)
+  {
+    return $this->canal += $canal;
+  }
+
+  public function adicionarVolume($volume)
+  {
+    return $this->volume += $volume;
+  }
+
+  public function diminuirCanal($canal)
+  {
+    return $this->canal -= $canal;
+  }
+  public function diminuirVolume($volume)
+  {
+    return $this->volume -= $volume;
+  }
 }
