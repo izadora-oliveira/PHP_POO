@@ -4,54 +4,44 @@ require("televisao.php");
 class Controle
 {
     //Atributos
-    public $on;
-    public $mudacanal;
-    public $altervolume;
+    public $tv;
 
     // contrutor da classe
-    function __construct($on_c, $mudacanal_c, $altervolume_c)
+    function __construct($tv)
     {
-        $this->on = $on_c;
-        $this->mudacanal = $mudacanal_c;
-        $this->altervolume = $altervolume_c;
-        
+        $this->tv = $tv;        
     }
 
     // getters e setters
-    public function setOn($on)
+    public function setTv($tv)
     {
-        $this->on = $on;
+        $this->tv = $tv;
     }
-    public function setMudacanal($mudacanal)
+    function getTv()
     {
-        $this->mudacanal = $mudacanal;
+        return $this->tv;
     }
-    public function setAltervolume($altervolume)
-    {
-        $this->altervolume = $altervolume;
-    }
-    function getOn($on)
-    {
-        return $this->on;
-    }
-    function getMudacanal($mudacanal)
-    {
-        return $this->mudacanal;
-    }
-    function getAltervolume($altervolume)
-    {
-        return $this->altervolume;
-    }
-
-    //métodos
-	function mudacanal($mudacanal)
-    {
-    $this->mudacanal = $mudacanal;
-    }
-    function altervolume($altervolume)
-    {
-    $this->altervolume = $altervolume;
-    }
-    
     
 }
+
+$objTV = new Televisao(9, 30);
+echo "Canal: " . $objTV->getCanal();
+echo " - Volume: " . $objTV->getVolume();
+echo "<hr/>";
+$objControleRemoto = new ControleRemoto($objTV);
+$objControleRemoto->setTv($objTV->adicionarCanal(1));
+echo "<br/>";
+echo "Canal Modificado usando + " . $objControleRemoto->getTv();
+$objControleRemoto->setTv($objTV->adicionarVolume(1));
+echo "<br/>";
+echo "Volume Modificado usando + " . $objControleRemoto->getTv();
+
+//indicando canal direto
+echo "<hr/>";
+$objTV->setCanal(13);
+$objControleRemoto->setTv($objTV->getCanal());
+echo "Trocar para um canal indicado: " . $objControleRemoto->getTv();
+echo "<br/>";
+$objTV->setVolume(60);
+$objControleRemoto->setTv($objTV->getVolume());
+echo "Trocar para um volume indicado: " . $objControleRemoto->getTv();
