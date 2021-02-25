@@ -9,6 +9,19 @@ class Endereco
     public $cep;
     public $complemento;
 
+
+    // contrutor da classe
+    function __construct($rua, $bairro, $cidade, $estado, $cep, $complemento)
+    {
+        $this->rua = $rua;
+        $this->bairro = $bairro;
+        $this->cidade = $cidade;
+        $this->estado = $estado;
+        $this->cep = $cep;
+        $this->complemento = $complemento;
+        
+    }
+
     function setRua($rua)
     {
         $this->rua = $rua;
@@ -59,4 +72,45 @@ class Endereco
     }
 }
 
-?>
+//métodos
+function resumoendereco()
+{
+    return "$this->rua , $this->bairro , $this->cidade , $this->estado , $this->cep , $this->complemento.";
+}
+
+function alterbairro($bairro)
+{
+    //afetar um atributo do objeto
+    $this->bairro = $bairro;
+}
+
+function altercidade($cidade)
+{
+    //afetar um atributo do objeto
+    $this->cidade = $cidade;
+}
+function alterestado($estado)
+{
+    //afetar um atributo do objeto
+    $this->estado = $estado;
+}
+function altercep($cep)
+{
+    //afetar um atributo do objeto
+    $this->cep = $cep;
+}
+function altercomplemento($complemento)
+{
+    //afetar um atributo do objeto
+    $this->complemento = $complemento;
+}
+
+//objetos
+$objFunc1 = new Endereco();
+$objFunc1->setRua('B');
+$objFunc1->setBairro('Prazeres');
+$objFunc1->setCidade('Jaboatão');
+$objFunc1->setEstado('Pernambuco');
+$objFunc1->setCep('54740711');
+$objFunc1->setComplemento('casa');
+echo $objFunc1->resumoendereco();
