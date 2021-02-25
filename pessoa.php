@@ -54,18 +54,20 @@ class Pessoa
         return $this->nascimento;
     }
 
-    //métodos
-	function resumopessoa()
-	{
-		return "$this->nome , $this->cpf ,  $this->rg , $this->nascimento.";
-	}
-
+    //método
+  function resumirPessoa()
+  {
+    return "$this->nome cpf: $this->cpf , rg: $this->rg  data de nascimento:  $this->nascimento, endereço: "  . $this->endereco;
+  }
 }
+//instanciar o objeto
+$objEndereco1 = new Endereco("Rua a", "Santo Amaro", "Recife", "PE", "54123-999");
+$objPessoa1 = new Pessoa("Taty", "123.456.789-00", "123456", "19/05");
+$objPessoa1->setEndereco($objEndereco1->ResumoEndereco());
+echo $objPessoa1->resumirPessoa();
 
-//objetos
-$func1 = new Pessoa();
-$func1->setNome('maria');
-$func1->setCpf(14785236996);
-$func1->setRg(63225147);
-$func1->setNascimento(02/05/1988);
-echo $objFunc1->resumopessoa();
+echo "<hr/>";
+$objEndereco2 = new Endereco("Rua das Flores", "Coelhos", "Recife", "PE", "58123-999");
+$objPessoa2 = new Pessoa("Cremildo", "321.456.789-00", "123456", "17/04");
+$objPessoa2->setEndereco($objEndereco2->ResumoEndereco());
+echo $objPessoa2->resumirPessoa();
