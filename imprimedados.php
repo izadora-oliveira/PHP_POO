@@ -10,6 +10,7 @@
 <?php
 
 require("pessoa.php");
+require("endereco.php");
 
 
 ?>
