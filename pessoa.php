@@ -52,12 +52,18 @@ class Pessoa
         return $this->nascimento;
     }
 
+    //métodos
+	function resumopessoa()
+	{
+		return "$this->nome , $this->cpf ,  $this->rg , $this->nascimento.";
+	}
+
 }
 
 //objetos
 $func1 = new Pessoa();
-$func1->setNome("");
-$func1->setCpf();
-
-
-?>
+$func1->setNome('maria');
+$func1->setCpf(14785236996);
+$func1->setRg(63225147);
+$func1->setNascimento(02/05/1988);
+echo $objFunc1->resumopessoa();
