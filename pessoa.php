@@ -4,18 +4,19 @@ require("endereco.php");
 class Pessoa
 {
     public $nome;
-    private $cpf;
-    private $rg;
-    private $nascimento;
+    public $cpf;
+    public $rg;
+    public $nascimento;
+    public $endereco;
     
 
     // contrutor da classe
-    function __construct($nome_c, $cpf_c, $rg_c)
+    public function __construct($nome_c, $cpf_c, $rg_c, $nascimento_c)
     {
         $this->nome = $nome_c;
         $this->cpf = $cpf_c;
         $this->rg = $rg_c;
-        
+        $this->nascimento= $nascimento_c;
     }
 
 
