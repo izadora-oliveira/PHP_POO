@@ -11,7 +11,7 @@ class Endereco
 
 
     // contrutor da classe
-    function __construct($rua_c, $bairro_c, $cidade_c, $estado_c, $cep_c, $complemento_c)
+    function __construct($rua_c, $bairro_c, $cidade_c, $estado_c, $cep_c, $complemento_c = null)
     {
         $this->rua = $rua_c;
         $this->bairro = $bairro_c;
