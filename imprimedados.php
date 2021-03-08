@@ -9,7 +9,7 @@
 <body>
 <?php
 
-require("aluno.php")
+require("animal.php")
 
 
 ?>
