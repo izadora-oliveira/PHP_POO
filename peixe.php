@@ -14,7 +14,7 @@ class Peixe extends Animal
     $this->qtdpatas = $qtdpatas_c;
     $this->cor = $cor_c;
     $this->ambiente = $ambiente_c;
-    $this->qtdpatas = $velocidade_c;
+    $this->velocidade = $velocidade_c;
     $this->caracteristica = $caracteristica_c;
     }
 
@@ -31,7 +31,12 @@ class Peixe extends Animal
     //métodos
     function dadospeixe()
     {
-        
+        echo $this->dadosanimal();
+        echo '<br/>';
+        echo "característica:", $this->caracteristica;
     }
-
 }
+
+//$peixe = new Peixe('nemu', '10 centímetros', '0', 'laranja e branco', 'aquático', '2 km/h', 'tem uma nadadeira menor que a outra');
+
+//$peixe->dadospeixe();
