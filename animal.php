@@ -73,11 +73,18 @@ class Animal
     }
 
     //método
-    function dados()
+    function dadosanimal()
   {
-    return "nome: $this->nome, comprimento: $this->comprimento, quantidade de patas: $this->qtdpatas,  cor:  $this->cor, ambiente: $this->ambiente, velocidade: $this->velocidade";
+    echo "nome:", $this->nome;
+    echo '<br/>';
+    echo "comprimento:", $this->comprimento;
+    echo '<br/>';
+    echo "quantidade de patas:", $this->qtdpatas;
+    echo '<br/>';
+    echo "cor:", $this->cor;
+    echo '<br/>';
+    echo "ambiente:", $this->ambiente;
+    echo '<br/>';
+    echo "velocidade:", $this->velocidade;
   }
 }
-
-$objanimal = new Animal("gato", "36 centimentros", "4", "preto", "domestico", "20km");
-echo "Informações do animal: " . $objanimal->dados();
