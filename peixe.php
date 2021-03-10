@@ -36,7 +36,3 @@ class Peixe extends Animal
         echo "característica:", $this->caracteristica;
     }
 }
-
-//$peixe = new Peixe('nemu', '10 centímetros', '0', 'laranja e branco', 'aquático', '2 km/h', 'tem uma nadadeira menor que a outra');
-
-//$peixe->dadospeixe();
