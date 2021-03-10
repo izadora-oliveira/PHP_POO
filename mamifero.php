@@ -6,7 +6,7 @@ class Mamifero extends Animal
     public $alimento;
 
     //método construtor
-    function __construct($nome_c, $comprimento_c, $qtdpatas_c, $cor_c, $ambiente_c, $velocidade_c, $alimento_c)
+    function __construct($nome_c, $comprimento_c, $qtdpatas_c, $cor_c, $ambiente_c, $velocidade_c, $alimento_c = null)
     {
     $this->nome = $nome_c;
     $this->comprimento = $comprimento_c;
@@ -35,7 +35,3 @@ class Mamifero extends Animal
         echo "alimento:", $this->alimento;
     }
 }
-
-//$mamifero = new Mamifero('cachorro', '80 centímetros', '4', 'preto', 'terrestre, doméstico', '20 km/h', 'leite materno, depois galinha crua e ração');
-
-//$mamifero->dadosmamifero();
