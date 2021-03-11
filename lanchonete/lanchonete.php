@@ -1,10 +1,6 @@
 <?php
-
-require "prato.php";
-require "lanche.php";
-require "pedido.php";
+//require "lanche.php";
 require "pizza.php";
-require "salgadinho.php";
 
 class Lanchonete
 {
@@ -12,15 +8,14 @@ class Lanchonete
     //fazer construtor
     public function main()
     {
-
-        $p1 = new Pizza("Bolonhesa", "peperoni", "catupiry", "Pizza de peperoni", 40.0, "22/11/2020", 40);
-        $p1->toString();
-
-        echo "<br/>";
-        echo "<br/>";
+        $p1 = new Pizza();
+        $p1->armazena("peperoni", 40.0, "22/11/2020", 40, 'peperoni', "catupiry", "bolonhesa");
+        $p1->armazena("3 queijos", 40.0, "10/2/2020", 40, "gorgonzola", "calabresa", "3 queijos");
+        $p1->armazena("Provoleta", 40.0, "12/8/2020", 40, "provolone", "scala", "mostarda e mel");
         
-        $l1 = new Lanche("Brioche", "calabresa", "Catshup mostarda", "Calabria", 13, "22/10/2020", 300);
-        $l1->toString();
+
+        echo "<br/>";
+        echo "<br/>";
 
     }
 
