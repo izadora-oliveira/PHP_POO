@@ -2,10 +2,10 @@
 
 class Prato
 {
-  public $nome;
-  public $preco;
-  public $dataDeValidade;
-  public $peso;
+  public $nome = 0;
+  public $preco = 0;
+  public $dataDeValidade = 0;
+  public $peso = 0;
 
 
 
