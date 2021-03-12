@@ -8,7 +8,7 @@ class Lanche extends Prato
   public $contador = 0;
 
   //fazer construtor
-  function __construct($nome, $preco, $dataDeValidade, $peso, $pao, $recheio, $molho)
+  function armazena($nome, $preco, $dataDeValidade, $peso, $pao, $recheio, $molho)
   {
     $this->nome[$this->contador] = $nome;
     $this->preco[$this->contador] = $preco;
