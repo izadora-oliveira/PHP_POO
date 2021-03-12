@@ -8,6 +8,16 @@ class Pizza extends Prato
   public $contador = 0;
 
   //fazer construtor
+  function __construct($nome, $preco, $dataDeValidade, $peso, $borda, $recheio, $molho)
+  {
+    $this->nome = $nome;
+    $this->preco = $preco;
+    $this->dataDeValidade = $dataDeValidade;
+    $this->peso = $peso;
+    $this->recheio = $borda;
+    $this->massa = $recheio;
+    $this->tipo = $molho;
+  }
   
   function armazena($nome, $preco, $dataDeValidade, $peso, $borda, $recheio, $molho)
   {
